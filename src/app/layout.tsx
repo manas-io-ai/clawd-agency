@@ -45,7 +45,15 @@ const structuredData = {
   offers: [
     {
       "@type": "Offer",
-      name: "Starter",
+      name: "One-Time Setup",
+      price: "5000",
+      priceCurrency: "USD",
+      description:
+        "Dedicated Mac Mini instance, custom workspace, industry skills, bot setup, security hardening, 2-week onboarding, ongoing optimization.",
+    },
+    {
+      "@type": "Offer",
+      name: "Starter Monthly",
       price: "500",
       priceCurrency: "USD",
       priceSpecification: {
@@ -57,7 +65,7 @@ const structuredData = {
     },
     {
       "@type": "Offer",
-      name: "Pro",
+      name: "Pro Monthly",
       price: "1000",
       priceCurrency: "USD",
       priceSpecification: {
@@ -69,7 +77,7 @@ const structuredData = {
     },
     {
       "@type": "Offer",
-      name: "Enterprise",
+      name: "Enterprise Monthly",
       price: "2000",
       priceCurrency: "USD",
       priceSpecification: {

@@ -347,6 +347,74 @@ const plans = [
   },
 ];
 
+const setupIncludes = [
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008V17.25zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008V17.25zm0-6h.008v.008h-.008v-.008z" />
+      </svg>
+    ),
+    title: "Dedicated Mac Mini Instance",
+    desc: "Your AI runs on its own always-on Apple Silicon hardware — not a shared cloud VM. Dedicated compute, dedicated memory, zero noisy neighbors.",
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17l-5.82-3.36a1.5 1.5 0 010-2.66l5.82-3.36a1.5 1.5 0 011.56 0l5.82 3.36a1.5 1.5 0 010 2.66l-5.82 3.36a1.5 1.5 0 01-1.56 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M5.6 11.85l5.82 3.36a1.5 1.5 0 001.56 0l5.82-3.36" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M5.6 15.85l5.82 3.36a1.5 1.5 0 001.56 0l5.82-3.36" />
+      </svg>
+    ),
+    title: "Custom Workspace Configuration",
+    desc: "Tailored file structure, knowledge base, SOPs, brand assets, and document library — pre-loaded so your AI knows your business from minute one.",
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
+      </svg>
+    ),
+    title: "Industry-Specific Skill Development",
+    desc: "We build custom skill modules for your domain — real estate comps, e-commerce analytics, agency workflows, whatever your business needs.",
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+      </svg>
+    ),
+    title: "Telegram & WhatsApp Bot Setup",
+    desc: "We create, configure, and deploy your private bot on Telegram and/or WhatsApp — fully branded, secured, and ready to message from any device.",
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+      </svg>
+    ),
+    title: "Security Hardening",
+    desc: "Encrypted workspace, isolated environment, access controls, and data protection — your business data stays locked down and private.",
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+      </svg>
+    ),
+    title: "2 Weeks Hands-On Onboarding",
+    desc: "We don't just hand you a bot and disappear. Two full weeks of live training, workflow optimization, and fine-tuning until your AI works exactly how you need it.",
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+      </svg>
+    ),
+    title: "Ongoing Optimization",
+    desc: "Your AI gets smarter over time. We continuously refine skills, update integrations, and optimize performance based on your actual usage patterns.",
+  },
+];
+
 function Pricing() {
   return (
     <section id="pricing" className="py-24 px-6 relative">
@@ -360,11 +428,41 @@ function Pricing() {
             Less than a <span className="text-cyan">part-time hire</span>
           </h2>
           <p className="text-text-muted mt-4 max-w-lg mx-auto">
-            No contracts. No hidden fees. Cancel anytime. Your AI keeps working
-            while you sleep.
+            One-time setup + simple monthly. No contracts. Cancel anytime.
           </p>
         </div>
 
+        {/* Founding Partner Banner */}
+        <div className="mb-10 p-5 rounded-2xl border border-cyan/40 bg-cyan/[0.04] relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan to-transparent" />
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+            <span className="shrink-0 px-3 py-1.5 bg-cyan/10 border border-cyan/30 rounded-lg text-cyan font-bold text-xs uppercase tracking-widest font-mono">
+              🤝 Founding Partner
+            </span>
+            <div className="text-center sm:text-left">
+              <p className="font-semibold text-text">
+                First 3 clients get{" "}
+                <span className="text-cyan font-bold">50% off setup</span> —{" "}
+                <span className="line-through text-text-muted">$5,000</span>{" "}
+                <span className="text-cyan font-black">$2,500</span> one-time
+              </p>
+              <p className="text-text-muted text-sm mt-1">
+                Limited spots. Includes everything below plus direct founder access and priority feature requests.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Setup Fee */}
+        <div className="mb-12 text-center">
+          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-bg-card border border-border">
+            <span className="text-text-muted text-sm font-mono uppercase tracking-wider">One-time setup</span>
+            <span className="text-3xl font-black">$5,000</span>
+            <span className="text-text-muted text-sm">for all tiers</span>
+          </div>
+        </div>
+
+        {/* Plan Cards */}
         <div className="grid md:grid-cols-3 gap-6 items-start">
           {plans.map((plan) => (
             <div
@@ -384,12 +482,15 @@ function Pricing() {
               )}
 
               <h3 className="text-xl font-bold">{plan.name}</h3>
-              <div className="mt-4 mb-2">
+              <div className="mt-4 mb-1">
                 <span className="text-5xl font-black">{plan.price}</span>
                 <span className="text-text-muted font-mono text-sm">
                   /month
                 </span>
               </div>
+              <p className="text-text-muted text-xs font-mono mb-4">
+                + $5,000 one-time setup
+              </p>
               <p className="text-text-muted text-sm mb-6">{plan.desc}</p>
 
               <a
@@ -428,6 +529,64 @@ function Pricing() {
               </ul>
             </div>
           ))}
+        </div>
+
+        {/* What's Included in Setup */}
+        <div className="mt-20">
+          <div className="text-center mb-12">
+            <p className="text-cyan font-mono text-sm tracking-widest uppercase mb-3">
+              What&apos;s Included in Setup
+            </p>
+            <h3 className="text-3xl md:text-4xl font-bold tracking-tight">
+              $5,000 buys you a <span className="text-cyan">full deployment</span>
+            </h3>
+            <p className="text-text-muted mt-3 max-w-2xl mx-auto">
+              Not a SaaS login. Not a template. A fully engineered AI employee — built, configured, secured, and trained on your business.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {setupIncludes.map((item) => (
+              <div
+                key={item.title}
+                className="p-5 rounded-xl bg-bg-card border border-border hover:border-cyan/20 transition-colors group"
+              >
+                <div className="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center text-cyan mb-4 group-hover:bg-cyan/20 transition-colors">
+                  {item.icon}
+                </div>
+                <h4 className="font-bold text-sm mb-2">{item.title}</h4>
+                <p className="text-text-muted text-xs leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Value comparison */}
+          <div className="mt-10 p-6 rounded-2xl border border-border bg-bg-card text-center">
+            <p className="text-text-muted text-sm mb-2">Compare the cost</p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+              <div>
+                <p className="text-text-muted text-xs font-mono uppercase tracking-wider mb-1">Part-time VA</p>
+                <p className="text-2xl font-bold">$2,500<span className="text-text-muted text-sm">/mo</span></p>
+              </div>
+              <span className="text-text-muted text-2xl hidden sm:block">vs</span>
+              <span className="text-text-muted text-sm sm:hidden">vs</span>
+              <div>
+                <p className="text-text-muted text-xs font-mono uppercase tracking-wider mb-1">Full-time employee</p>
+                <p className="text-2xl font-bold">$5,000<span className="text-text-muted text-sm">+/mo</span></p>
+              </div>
+              <span className="text-text-muted text-2xl hidden sm:block">vs</span>
+              <span className="text-text-muted text-sm sm:hidden">vs</span>
+              <div>
+                <p className="text-cyan text-xs font-mono uppercase tracking-wider mb-1 font-bold">Clawd AI</p>
+                <p className="text-2xl font-bold text-cyan">$500–2K<span className="text-cyan/60 text-sm">/mo</span></p>
+              </div>
+            </div>
+            <p className="text-text-muted text-xs mt-4">
+              24/7 availability • No benefits • No PTO • No training ramp-up • Instant scale
+            </p>
+          </div>
         </div>
       </div>
     </section>
