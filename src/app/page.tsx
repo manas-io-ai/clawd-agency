@@ -296,57 +296,6 @@ function UseCases() {
 }
 
 /* ───────────────────── PRICING ───────────────────── */
-const plans = [
-  {
-    name: "Starter",
-    price: "$500",
-    desc: "Perfect for solopreneurs who need a reliable AI right-hand.",
-    features: [
-      "Personal Telegram bot",
-      "Industry skill pack (1 domain)",
-      "Configured workspace",
-      "5GB knowledge base",
-      "Email support",
-      "Web search & research",
-    ],
-    cta: "Get Started",
-    popular: false,
-  },
-  {
-    name: "Pro",
-    price: "$1,000",
-    desc: "For growing businesses that need serious AI firepower.",
-    features: [
-      "Everything in Starter",
-      "Multi-domain skill packs",
-      "20GB knowledge base",
-      "Custom tool integrations",
-      "Priority support",
-      "Calendar & email access",
-      "Weekly optimization calls",
-    ],
-    cta: "Go Pro",
-    popular: true,
-  },
-  {
-    name: "Enterprise",
-    price: "$2,000",
-    desc: "Full AI employee with custom everything.",
-    features: [
-      "Everything in Pro",
-      "Unlimited knowledge base",
-      "Custom API integrations",
-      "Multi-assistant setup",
-      "Dedicated account manager",
-      "Custom training & fine-tuning",
-      "SLA guarantee",
-      "Team onboarding",
-    ],
-    cta: "Contact Us",
-    popular: false,
-  },
-];
-
 const setupIncludes = [
   {
     icon: (
@@ -402,7 +351,7 @@ const setupIncludes = [
       </svg>
     ),
     title: "2 Weeks Hands-On Onboarding",
-    desc: "We don't just hand you a bot and disappear. Two full weeks of live training, workflow optimization, and fine-tuning until your AI works exactly how you need it.",
+    desc: "We don&apos;t just hand you a bot and disappear. Two full weeks of live training, workflow optimization, and fine-tuning until your AI works exactly how you need it.",
   },
   {
     icon: (
@@ -415,26 +364,40 @@ const setupIncludes = [
   },
 ];
 
+const everythingIncluded = [
+  "Personal Telegram & WhatsApp bot",
+  "Dedicated Mac Mini instance",
+  "Custom workspace & knowledge base",
+  "Industry-specific skill packs",
+  "Web search, research & analysis",
+  "Calendar & email integration",
+  "Security hardening & encryption",
+  "2 weeks hands-on onboarding",
+  "Ongoing optimization & updates",
+  "Priority support",
+];
+
 function Pricing() {
   return (
     <section id="pricing" className="py-24 px-6 relative">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(0,229,204,0.05)_0%,_transparent_50%)]" />
-      <div className="relative z-10 max-w-6xl mx-auto">
+      <div className="relative z-10 max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <p className="text-cyan font-mono text-sm tracking-widest uppercase mb-3">
-            Pricing
+            Simple Pricing
           </p>
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-            Less than a <span className="text-cyan">part-time hire</span>
+            One plan. <span className="text-cyan">Everything included.</span>
           </h2>
           <p className="text-text-muted mt-4 max-w-lg mx-auto">
-            One-time setup + simple monthly. No contracts. Cancel anytime.
+            No tiers. No upsells. No decision fatigue. Just a fully deployed AI employee.
           </p>
         </div>
 
         {/* Founding Partner Banner */}
         <div className="mb-10 p-5 rounded-2xl border border-cyan/40 bg-cyan/[0.04] relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan to-transparent" />
+          <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan/30 to-transparent" />
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
             <span className="shrink-0 px-3 py-1.5 bg-cyan/10 border border-cyan/30 rounded-lg text-cyan font-bold text-xs uppercase tracking-widest font-mono">
               🤝 Founding Partner
@@ -444,94 +407,134 @@ function Pricing() {
                 First 3 clients get{" "}
                 <span className="text-cyan font-bold">50% off setup</span> —{" "}
                 <span className="line-through text-text-muted">$5,000</span>{" "}
-                <span className="text-cyan font-black">$2,500</span> one-time
+                <span className="text-cyan font-black text-lg">$2,500</span>
               </p>
               <p className="text-text-muted text-sm mt-1">
-                Limited spots. Includes everything below plus direct founder access and priority feature requests.
+                Limited spots. Direct founder access and priority feature requests included.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Setup Fee */}
-        <div className="mb-12 text-center">
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-bg-card border border-border">
-            <span className="text-text-muted text-sm font-mono uppercase tracking-wider">One-time setup</span>
-            <span className="text-3xl font-black">$5,000</span>
-            <span className="text-text-muted text-sm">for all tiers</span>
-          </div>
-        </div>
-
-        {/* Plan Cards */}
-        <div className="grid md:grid-cols-3 gap-6 items-start">
-          {plans.map((plan) => (
-            <div
-              key={plan.name}
-              className={`relative p-8 rounded-2xl border transition-all duration-300 ${
-                plan.popular
-                  ? "bg-bg-card border-cyan glow-cyan scale-[1.02]"
-                  : "bg-bg-card border-border hover:border-cyan/30"
-              }`}
-            >
-              {plan.popular && (
-                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                  <span className="px-4 py-1 bg-cyan text-bg font-bold text-xs rounded-full uppercase tracking-wider">
-                    Most Popular
-                  </span>
-                </div>
-              )}
-
-              <h3 className="text-xl font-bold">{plan.name}</h3>
-              <div className="mt-4 mb-1">
-                <span className="text-5xl font-black">{plan.price}</span>
-                <span className="text-text-muted font-mono text-sm">
-                  /month
-                </span>
+        {/* Single Pricing Card */}
+        <div className="relative p-10 md:p-12 rounded-3xl border border-cyan glow-cyan bg-bg-card">
+          {/* Two-column pricing */}
+          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-10">
+            {/* Setup */}
+            <div className="flex-1">
+              <p className="text-text-muted font-mono text-xs uppercase tracking-widest mb-2">
+                One-Time Setup
+              </p>
+              <div className="flex items-baseline gap-2">
+                <span className="text-6xl md:text-7xl font-black tracking-tight">$5,000</span>
               </div>
-              <p className="text-text-muted text-xs font-mono mb-4">
-                + $5,000 one-time setup
+              <p className="text-text-muted text-sm mt-2 max-w-xs">
+                We build, configure, secure, and deploy your AI from scratch. Yours forever.
               </p>
-              <p className="text-text-muted text-sm mb-6">{plan.desc}</p>
-
-              <a
-                href={BOOKING_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`block text-center py-3.5 rounded-xl font-bold transition-all duration-200 mb-8 ${
-                  plan.popular
-                    ? "bg-red text-white glow-red hover:brightness-110"
-                    : "border border-border text-text hover:border-cyan hover:text-cyan"
-                }`}
-              >
-                {plan.cta}
-              </a>
-
-              <ul className="space-y-3">
-                {plan.features.map((f) => (
-                  <li
-                    key={f}
-                    className="flex items-start gap-3 text-sm text-text-muted"
-                  >
-                    <svg
-                      className="w-4 h-4 text-cyan mt-0.5 shrink-0"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    {f}
-                  </li>
-                ))}
-              </ul>
             </div>
-          ))}
+
+            {/* Divider */}
+            <div className="hidden md:block w-px h-32 bg-gradient-to-b from-transparent via-border to-transparent self-center" />
+            <div className="md:hidden h-px w-full bg-gradient-to-r from-transparent via-border to-transparent" />
+
+            {/* Monthly */}
+            <div className="flex-1">
+              <p className="text-text-muted font-mono text-xs uppercase tracking-widest mb-2">
+                Then Monthly
+              </p>
+              <div className="flex items-baseline gap-2">
+                <span className="text-6xl md:text-7xl font-black text-cyan tracking-tight">$500</span>
+                <span className="text-text-muted font-mono text-sm">/mo</span>
+              </div>
+              <p className="text-text-muted text-sm mt-2 max-w-xs">
+                Hosting, AI compute, maintenance, updates, and ongoing optimization. Cancel anytime.
+              </p>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <a
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block text-center py-4.5 rounded-xl bg-red text-white font-bold text-lg glow-red hover:brightness-110 transition-all duration-200 mb-10"
+          >
+            Book Your Setup Call →
+          </a>
+
+          {/* Everything included */}
+          <div>
+            <p className="text-xs font-mono uppercase tracking-widest text-text-muted mb-5">
+              Everything included
+            </p>
+            <div className="grid sm:grid-cols-2 gap-x-8 gap-y-3">
+              {everythingIncluded.map((item) => (
+                <div key={item} className="flex items-center gap-3">
+                  <svg
+                    className="w-4 h-4 text-cyan shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  <span className="text-sm text-text-muted">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* No-risk line */}
+          <div className="mt-8 pt-6 border-t border-border flex flex-wrap items-center justify-center gap-6 text-xs text-text-muted font-mono">
+            <span className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-cyan" />
+              No contracts
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-cyan" />
+              Cancel anytime
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-cyan" />
+              Live in 48 hours
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-cyan" />
+              Data export on exit
+            </span>
+          </div>
         </div>
 
-        {/* What's Included in Setup */}
+        {/* Value comparison */}
+        <div className="mt-12 p-6 rounded-2xl border border-border bg-bg-card text-center">
+          <p className="text-text-muted text-sm mb-4">Compare the real cost</p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10">
+            <div>
+              <p className="text-text-muted text-xs font-mono uppercase tracking-wider mb-1">Part-time VA</p>
+              <p className="text-2xl font-bold">$2,500<span className="text-text-muted text-sm">/mo</span></p>
+            </div>
+            <span className="text-text-muted text-2xl hidden sm:block">vs</span>
+            <span className="text-text-muted text-sm sm:hidden">vs</span>
+            <div>
+              <p className="text-text-muted text-xs font-mono uppercase tracking-wider mb-1">Full-time employee</p>
+              <p className="text-2xl font-bold">$5,000<span className="text-text-muted text-sm">+/mo</span></p>
+            </div>
+            <span className="text-text-muted text-2xl hidden sm:block">vs</span>
+            <span className="text-text-muted text-sm sm:hidden">vs</span>
+            <div>
+              <p className="text-cyan text-xs font-mono uppercase tracking-wider mb-1 font-bold">Clawd AI</p>
+              <p className="text-2xl font-bold text-cyan">$500<span className="text-cyan/60 text-sm">/mo</span></p>
+            </div>
+          </div>
+          <p className="text-text-muted text-xs mt-4">
+            24/7 availability • No benefits • No PTO • No training ramp-up • Instant scale
+          </p>
+        </div>
+
+        {/* What's Included in Setup — detail cards */}
         <div className="mt-20">
           <div className="text-center mb-12">
             <p className="text-cyan font-mono text-sm tracking-widest uppercase mb-3">
@@ -560,32 +563,6 @@ function Pricing() {
                 </p>
               </div>
             ))}
-          </div>
-
-          {/* Value comparison */}
-          <div className="mt-10 p-6 rounded-2xl border border-border bg-bg-card text-center">
-            <p className="text-text-muted text-sm mb-2">Compare the cost</p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
-              <div>
-                <p className="text-text-muted text-xs font-mono uppercase tracking-wider mb-1">Part-time VA</p>
-                <p className="text-2xl font-bold">$2,500<span className="text-text-muted text-sm">/mo</span></p>
-              </div>
-              <span className="text-text-muted text-2xl hidden sm:block">vs</span>
-              <span className="text-text-muted text-sm sm:hidden">vs</span>
-              <div>
-                <p className="text-text-muted text-xs font-mono uppercase tracking-wider mb-1">Full-time employee</p>
-                <p className="text-2xl font-bold">$5,000<span className="text-text-muted text-sm">+/mo</span></p>
-              </div>
-              <span className="text-text-muted text-2xl hidden sm:block">vs</span>
-              <span className="text-text-muted text-sm sm:hidden">vs</span>
-              <div>
-                <p className="text-cyan text-xs font-mono uppercase tracking-wider mb-1 font-bold">Clawd AI</p>
-                <p className="text-2xl font-bold text-cyan">$500–2K<span className="text-cyan/60 text-sm">/mo</span></p>
-              </div>
-            </div>
-            <p className="text-text-muted text-xs mt-4">
-              24/7 availability • No benefits • No PTO • No training ramp-up • Instant scale
-            </p>
           </div>
         </div>
       </div>

@@ -53,7 +53,7 @@ const structuredData = {
     },
     {
       "@type": "Offer",
-      name: "Starter Monthly",
+      name: "Monthly Service",
       price: "500",
       priceCurrency: "USD",
       priceSpecification: {
@@ -62,30 +62,8 @@ const structuredData = {
         priceCurrency: "USD",
         unitText: "MONTH",
       },
-    },
-    {
-      "@type": "Offer",
-      name: "Pro Monthly",
-      price: "1000",
-      priceCurrency: "USD",
-      priceSpecification: {
-        "@type": "UnitPriceSpecification",
-        price: "1000",
-        priceCurrency: "USD",
-        unitText: "MONTH",
-      },
-    },
-    {
-      "@type": "Offer",
-      name: "Enterprise Monthly",
-      price: "2000",
-      priceCurrency: "USD",
-      priceSpecification: {
-        "@type": "UnitPriceSpecification",
-        price: "2000",
-        priceCurrency: "USD",
-        unitText: "MONTH",
-      },
+      description:
+        "Hosting, AI compute, maintenance, updates, and ongoing optimization. Cancel anytime.",
     },
   ],
 };
