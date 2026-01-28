@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0b0d;
+  --color-bg-card: #111214;
+  --color-bg-card-hover: #1a1b1f;
+  --color-cyan: #00e5cc;
+  --color-cyan-dim: #00e5cc33;
+  --color-red: #ff3b3b;
+  --color-red-dim: #ff3b3b22;
+  --color-text: #e8e8e8;
+  --color-text-muted: #8a8f98;
+  --color-border: #1e2028;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glow effects */
+.glow-cyan {
+  box-shadow: 0 0 20px var(--color-cyan-dim), 0 0 60px var(--color-cyan-dim);
+}
+
+.glow-red {
+  box-shadow: 0 0 20px var(--color-red-dim), 0 0 40px var(--color-red-dim);
+}
+
+.glow-text {
+  text-shadow: 0 0 20px var(--color-cyan-dim);
+}
+
+/* Pulse animation for status dot */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.2); }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* Grid pattern background */
+.grid-bg {
+  background-image: 
+    linear-gradient(rgba(0, 229, 204, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 229, 204, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Card hover lift */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-cyan);
+  box-shadow: 0 8px 30px var(--color-cyan-dim);
+}
+
+/* Gradient line */
+.gradient-line {
+  background: linear-gradient(90deg, transparent, var(--color-cyan), transparent);
+  height: 1px;
+}
